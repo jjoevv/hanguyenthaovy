@@ -1,0 +1,269 @@
+
+a {
+  text-decoration: none;
+}
+
+.toggle-icon{
+  background-color:lightslategray;
+}
+.blue-normal {
+  background-color: #151735;
+}
+
+button.blue-normal:hover {
+  background-color: #131530;
+}
+
+button.blue-normal:active {
+  background-color: #11122a;
+}
+
+.blue-dark {
+  background-color: #101128;
+}
+
+button.blue-dark:hover {
+  background-color: #0d0e20;
+}
+
+button.blue-dark:active {
+  background-color: #090a18;
+}
+
+
+.tertiary-normal {
+  background-color: #55a0d4;
+}
+
+button.tertiary-normal:hover {
+  background-color: #4d90bf;
+}
+
+button.tertiary-normal:active {
+  background-color: #4480aa;
+}
+
+.text-tertiary{
+  color: #55a0d4;
+}
+
+.primary-normal {
+  background-color: #4957c7;
+}
+
+button.primary-normal:hover {
+  background-color: #424eb3;
+}
+
+button.primary-normal:active {
+  background-color: #3a469f;
+}
+
+.text-primary{
+  color: #4957c7;
+}
+
+.fs-larger{
+  font-size: 50px;
+}
+.fs-large{
+  font-size: 38px;
+}
+
+.fs-semi{
+  font-size: 26px;
+}
+.fs-medium{
+  font-size: 20px;
+}
+
+.fs-normal{
+  font-size: 16px;
+}
+
+.m-6{
+  margin: 80px;
+}
+
+.my-card-hover{
+  visibility: hidden;
+}
+
+.my-card{
+  display: grid;
+  cursor: pointer;
+  width: 340px;
+  height: 440px;
+  place-items: center;
+  overflow: hidden;
+}
+.my-img {
+  z-index: 2;
+  border-radius: 4px;
+  
+  transform: scale(1.05) ;
+}
+.my-card:hover .my-img {
+  transform: scale(0.98) ;
+  transition: transform 0.3s ease-in-out;
+}
+
+.my-card:hover .my-card-hover {
+  visibility: visible;
+  opacity: 0.96;  
+  background-color: gray;
+  z-index: 3;
+}
+.my-card::before{
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 150%;
+  background: linear-gradient(#43a0e3, #ff50ff);
+  filter: blur(2px);
+  transform: rotate(45deg);
+  animation: scrollborder 5.5s linear infinite;
+  border-radius: 4px;
+}
+s
+.my-card:hover::before{
+}
+
+@keyframes scrollborder {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.bg-gradient-blue {
+  background-image: linear-gradient(to bottom, #151735 50%, #131530 50%);
+  width: 100vw;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+.button-gradient {
+  background-image: linear-gradient(to right, #55a0d4, #374195 80%);
+  color: white; 
+
+}
+
+.nav-link{
+  color: #fff1ff;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav-link:hover{
+  color: #64bce4;
+}
+
+.active-link {
+  color: #6ecbf5 !important;
+  text-shadow: 0 0 1px #55a0d4;  
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+.skill-active {
+  text-shadow: 0 0 4px #4396c5;  
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.skill.skill-active:hover{
+  background-color: #424eb3;
+}
+
+
+.skill{
+  display: flex;
+  width: 220px;
+  height: 220px;
+  border: 0px;
+  padding-top: 100px;
+  background-color: #4a4c7b;
+  color: white;
+}
+
+.skill:hover {
+  background-color: #43446f;
+}
+
+.skill.skill-active {
+  background-color: #4957c7;
+  ;
+}
+
+.image-frame {
+  position: relative;
+  width: 220px; /* Độ rộng của khung ảnh */
+  height: 280px; /* Độ cao của khung ảnh */
+  margin-top: 100px;
+  border: 10px solid #55a0d4; 
+  border-radius: 10px; 
+  min-width: 220px;
+}
+.image-frame img {
+  position: absolute;
+  top: -50px; /* Điều chỉnh vị trí của hình ảnh ra phía trên */
+  left: -50px; /* Điều chỉnh vị trí của hình ảnh ra phía trái */
+  width: 220px; /* Độ rộng của hình ảnh */
+  height: 280px; /* Độ cao của hình ảnh */
+  border-radius: 10px; /* Bán kính của border-radius cho hình ảnh */
+}
+
+
+.selected-component {
+  transition: transform 0.3s ease-in-out; /* Áp dụng hiệu ứng transition */
+  transform: translateY(100%); /* Ẩn phần tử bằng cách dịch xuống dưới */
+}
+
+.selected-component.active {
+  transform: translateY(0); /* Hiển thị phần tử bằng cách dịch về vị trí ban đầu */
+}
+
+
+
+/*media*/
+@media (max-width: 767px) { /* Áp dụng cho các màn hình điện thoại di động */
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Canh giữa các phần tử trong trường hợp cần thiết */
+  }
+  .skill {
+    background-color: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px; /* Bỏ đi padding để giữ button gọn gàng */
+    margin: 0; /* Bỏ đi margin để tránh khoảng cách thừa */
+    border: none; /* Bỏ border */
+    cursor: pointer; /* Biến con trỏ thành pointer khi rê chuột vào button */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .text-tab{
+    font-size: small !important;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+  }
+  
+
+}
