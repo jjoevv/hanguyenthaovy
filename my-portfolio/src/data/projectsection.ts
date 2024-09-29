@@ -1,4 +1,4 @@
-import conf from '../assets/imgs/conf1.png'
+import conf from '../assets/imgs/conf1.jpg'
 export interface Project {
     id: number;
     title: string;

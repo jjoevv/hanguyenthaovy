@@ -13,6 +13,9 @@ module.exports = {
         'cyan-dark': '#4ce1e4',
         'cyan-lighter': '#d5ffff',
       },
+      rotate: {
+        '270': '270deg',
+      }
     },
   },
   plugins: [],

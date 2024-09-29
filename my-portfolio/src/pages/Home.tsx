@@ -4,24 +4,23 @@ import { Link } from 'react-router-dom';
 
 import ConfImg from '../assets/imgs/conf2.png'
 import ProjectSection from '../components/ProjectSection';
+import InformationSection from '../components/InformationSection';
+import ScrollToSections from '../components/ScrollToSection';
 
 
 const Home: React.FC = () => {
   return (
     <div
-
       style={{
-        height: '100vh', // Đặt chiều cao bằng chiều cao của màn hình
+        backgroundAttachment: 'fixed', // Giữ hình nền cố định khi cuộn
         backgroundImage: `url(${backgroundImage})`, // Đặt hình nền
         backgroundPosition: 'center', // Căn giữa hình nền
-
+        backgroundRepeat: 'no-repeat', // Không lặp lại hình nền
       }}
     >
-      <div
-        className='px-8'
-      >
+      <div className='px-8'>
         {/* Section Welcome */}
-        <section id="home" className="h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/path/to/your/background-image.jpg)' }}>
+        <section id="home" className="h-screen flex items-center justify-center " >
           <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center">
             <h1 className="text-5xl text-white font-bold mb-4">Welcome to My Portfolio</h1>
             <p className="text-xl text-gray-300 mb-6">
@@ -33,9 +32,13 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-
+        {/* Phần Information */}
+        <InformationSection/>
+        
         {/* Phần Projects */}
         <ProjectSection/>
+
+        <ScrollToSections/>
       </div>
     </div>
   );
