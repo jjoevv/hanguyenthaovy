@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { informationData } from '../data/information'; // Đường dẫn đến file information
 
 const InformationSection = () => {

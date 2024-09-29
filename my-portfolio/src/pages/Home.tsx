@@ -1,8 +1,6 @@
 import React from 'react';
 import backgroundImage from './../assets/imgs/bg.png'
-import { Link } from 'react-router-dom';
 
-import ConfImg from '../assets/imgs/conf2.png'
 import ProjectSection from '../components/ProjectSection';
 import InformationSection from '../components/InformationSection';
 import ScrollToSections from '../components/ScrollToSection';

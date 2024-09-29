@@ -45,7 +45,7 @@ export const informationData: Information = {
   skillSet: ["Front-end development", "Back-end development", "UI/UX Design"],
   icons: [
     { name: "Mail", icon: mailIcon, info: "contact@example.com" },
-    { name: "Phone", icon: "fa-phone", info: "+123 456 789" },
-    { name: "GitHub", icon: "fa-github", info: "github.com/your-profile" },
+    { name: "Phone", icon: phoneIcon, info: "+123 456 789" },
+    { name: "GitHub", icon: githubIcon, info: "github.com/your-profile" },
   ],
 };
