@@ -8,7 +8,6 @@ import Header from './pages/Header.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HashRouter>
-      
     <Header />
       <App />
     </HashRouter>
