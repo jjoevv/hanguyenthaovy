@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        black: '#000000',
+        'night': '#01110A',
+        'brunswick-green': '#134338',
+        'dark-green': '#05220b',
+        'spring-green': '#16f98a',
+
+        'cambridge-blue': '#73ba9b',
         'blue-dark': '#3b5cca',
         'cyan-light': '#80fff3',
         'cyan': '#bffff9',

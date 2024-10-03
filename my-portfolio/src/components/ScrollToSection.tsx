@@ -7,6 +7,7 @@ const SectionNavigator = () => {
     { name: 'About me', to: 'information' },
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
+    { name: 'Design', to: 'design'},
   ];
 
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);

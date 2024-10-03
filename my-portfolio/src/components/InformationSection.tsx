@@ -7,7 +7,7 @@ const InformationSection = () => {
   return (
     <section id="information" className="py-12">
       <div className='p-7 bg-white'>
-        <div className="container mx-auto flex flex-col md:flex-row bg-black-light text-white py-8 m-1">
+        <div className="container mx-auto flex flex-col md:flex-row bg-black-light text-white py-12 m-1">
           
           {/* Cột 1: Mục tiêu, Thông tin giáo dục và Biểu tượng công cụ */}
           <div className="flex-1 md:w-1/2 p-4 flex flex-col items-center">

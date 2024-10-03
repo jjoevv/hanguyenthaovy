@@ -4,6 +4,8 @@ import backgroundImage from './../assets/imgs/bg.png'
 import ProjectSection from '../components/ProjectSection';
 import InformationSection from '../components/InformationSection';
 import ScrollToSections from '../components/ScrollToSection';
+import MasonryGrid from '../components/MasonryGrid';
+
 
 
 const Home: React.FC = () => {
@@ -36,6 +38,10 @@ const Home: React.FC = () => {
         {/* Phần Projects */}
         <ProjectSection/>
 
+        {/* Phần images List */}
+        <MasonryGrid/>
+
+        {/* Phần Scroll to sections */}
         <ScrollToSections/>
       </div>
     </div>
