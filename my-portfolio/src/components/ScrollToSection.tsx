@@ -3,10 +3,9 @@ import { Link } from 'react-scroll';
 
 const SectionNavigator = () => {
   const sections = [
-    { name: 'Home', to: 'home' },
+    { name: 'Welcome', to: 'welcome' },
     { name: 'About me', to: 'information' },
     { name: 'Projects', to: 'projects' },
-    { name: 'Contact', to: 'contact' },
     { name: 'Design', to: 'design'},
   ];
 
@@ -21,7 +20,7 @@ const SectionNavigator = () => {
             to={section.to}
             smooth={true}
             duration={900}
-            className={`bg-blue-dark opacitay-25 transition-all duration-300 ease-in-out 
+            className={`bg-brunswick-green opacitay-25 transition-all duration-300 ease-in-out 
               ${hoveredSection === section.name ? 'px-2 h-8 rounded-full' : 'w-8 h-8 rounded-full'} 
               flex items-center justify-center cursor-pointer`}
             onMouseEnter={() => setHoveredSection(section.name)}
@@ -34,7 +33,7 @@ const SectionNavigator = () => {
 
           {/* Đường nối giữa các button */}
           {index < sections.length - 1 && (
-            <div className="w-1 h-4 bg-blue-light mx-2"></div>
+            <div className="w-1 h-4 bg-dark-green mx-2"></div>
           )}
         </div>
       ))}

@@ -8,15 +8,15 @@ const BackToHomePageButton = () => {
     const [hoveredSection, setHoveredSection] = useState<boolean | null>(null);
 
   return (
-     <div className="container fixed bottom-6 left-0 flex justify-center">
+     <div className="container self-start left-1 fixed bottom-6 flex justify-center items-center">
         
      {/* Back button */}
      <div 
      className={
         `
-        flex items-center justify-center px-4 py-2 bg-blue-500  text-white rounded
-        bg-blue-dark opacitay-25 transition-x-10 duration-1000 ease-in-out 
-         ${hoveredSection === true ? 'px-2 h-8 rounded-full' : 'w-8 h-8 rounded-full'} 
+        flex items-center justify-center px-4 py-2 bg-brunswick-green  text-white rounded
+         opacitay-25 transition-x-10 duration-1000 ease-in-out  shadow-lg
+         ${hoveredSection === true ? 'px-2 h-10 rounded-full' : 'w-10 h-10 rounded-full'} 
         `
        }
        onMouseEnter={() => setHoveredSection(true)}
@@ -24,7 +24,7 @@ const BackToHomePageButton = () => {
      >
          <Link
            to="/"
-           className='text-center'
+           className=''
          >
              <span className={`text-white font-semibold `}>
               {hoveredSection === true ? 
@@ -34,7 +34,7 @@ const BackToHomePageButton = () => {
               </>
                : 
                <>
-               <FontAwesomeIcon icon={faArrowLeft} className="mr-2" /> {/* Arrow icon */}
+               <FontAwesomeIcon icon={faArrowLeft} className="" size='lg' /> {/* Arrow icon */}
                </>
            
                }

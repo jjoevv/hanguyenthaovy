@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { informationData } from '../data/information';
 import backgroundImage from '../assets/imgs/bg.png';
@@ -23,6 +23,10 @@ const Contact: React.FC = () => {
   });
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [showSuccessMessage, setShowSuccessMessage] = useState(false); // State to control SuccessMessage
+  
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -68,7 +72,7 @@ const validateForm = (): boolean => {
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-3 gap-10 md:h-screen w-full bg-slate-200 pt-10"
+      className="grid grid-cols-1 md:grid-cols-3 gap-10 md:h-screen w-full bg-slate-100 pt-10"
       style={{
         backgroundAttachment: 'fixed', // Giữ hình nền cố định khi cuộn
         backgroundImage: `url(${backgroundImage})`, // Đặt hình nền

@@ -12,8 +12,8 @@ import des9 from '../assets/imgs/des10.png';
 import des10 from '../assets/imgs/des11.png';
 import des11 from '../assets/imgs/des12.jpg';
 import des12 from '../assets/imgs/des13.png';
+import des14 from '../assets/imgs/des14.png';
 import animation1 from '../assets/imgs/animation1.gif';
-import animation2 from '../assets/imgs/animation1.gif';
 
 
 const images = [
@@ -29,8 +29,8 @@ const images = [
   { src: des10, name: 'Cover book', info: 'A creative design for a non-profit storytelling campaign, aimed at raising awareness and funds for a meaningful cause' },
   { src: des11, name: 'Promotion', info: 'A post Back to school promotion' },
   { src: des12, name: 'Background', info: 'Main background in Back to school event' },
+  { src: des14, name: 'App Learning UX/UI Design', info: 'Coming soon' },
   { src: animation1, name: 'UX exercise', info: '' },
-  { src: animation2, name: 'UX exercise', info: '' }
 ]
 
 const MasonryGrid: React.FC = () => {
@@ -43,32 +43,11 @@ const MasonryGrid: React.FC = () => {
           </h2>
         </div>
         <div className="flex-1 md:w-4/5 overflow-hidden bg-white py-4">
-          <div className="w-3/4 mx-auto flex flex-col">
+          <div className="w-3/4 md:mx-20 flex flex-col">
             {/* Định nghĩa 3 hàng */}
-            <div className="flex flex-row flex-wrap ">
-              {images.slice(0, 5).map((image, index) => (
-                <div key={index} className="relative group bg-gray-200 flex-1 m-1 rounded-lg" style={{ minHeight: '200px' }}>
-                  {/* Container cho ảnh */}
-                  <div className="relative w-full h-full rounded-lg " style={{ paddingBottom: '100%' }}>
-                    <img
-                      src={image.src}
-                      alt={image.name}
-                      className="absolute top-0 left-0 w-full h-full rounded-lg object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-75" // Khi hover, ảnh sẽ co lại 75%
-                    />
-                  </div>
-
-                  {/* Overlay hiển thị thông tin khi hover */}
-                  <div className="absolute inset-0 p-2 bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-opacity duration-300">
-                    <h3 className="text-lg font-semibold mb-2">{image.name}</h3>
-                    <p className="text-sm text-center">{image.info}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
             <div className="flex flex-row flex-wrap">
-              {images.slice(5, 10).map((image, index) => (
-                <div key={index} className="relative group bg-gray-200 flex-1 m-1 rounded-lg" style={{ minHeight: '200px' }}>
+              {images.slice(0, 5).map((image, index) => (
+                <div key={index} className="relative group bg-gray-200 flex-1 m-2 rounded-lg cursor-pointer"  style={{ minHeight: '280px' }}>
                   {/* Container cho ảnh */}
                   <div className="relative w-full h-full" style={{ paddingBottom: '100%' }}>
                     <img
@@ -79,8 +58,8 @@ const MasonryGrid: React.FC = () => {
                   </div>
 
                   {/* Overlay hiển thị thông tin khi hover */}
-                  <div className="absolute inset-0 bg-black bg-opacity-80 p-2 text-white opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-opacity duration-300">
-                    <h3 className="text-lg font-semibold mb-2">{image.name}</h3>
+                  <div className="absolute text-center inset-0 bg-black bg-opacity-80 p-4 text-white opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-opacity duration-300">
+                    <h3 className="text-lg font-semibold mb-2 cursor-pointer">{image.name}</h3>
                     <p className="text-sm">{image.info}</p>
                   </div>
                 </div>
@@ -88,8 +67,29 @@ const MasonryGrid: React.FC = () => {
             </div>
 
             <div className="flex flex-row flex-wrap">
+              {images.slice(5, 10).map((image, index) => (
+                <div key={index} className="relative group bg-gray-200 flex-1 m-2 rounded-lg cursor-pointer" style={{ minHeight: '280px' }}>
+                  {/* Container cho ảnh */}
+                  <div className="relative w-full h-full" style={{ paddingBottom: '100%' }}>
+                    <img
+                      src={image.src}
+                      alt={image.name}
+                      className="absolute top-0 left-0 w-full h-full rounded-lg object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-75" // Khi hover, ảnh sẽ co lại 75%
+                    />
+                  </div>
+
+                  {/* Overlay hiển thị thông tin khi hover */}
+                  <div className="text-center absolute p-2 inset-0 bg-black bg-opacity-80 p-4 text-white opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-opacity duration-300 ">
+                    <h3 className="text-lg font-semibold mb-2 ">{image.name}</h3>
+                    <p className="text-sm ">{image.info}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-row flex-wrap">
               {images.slice(10).map((image, index) => (
-                <div key={index} className="relative group bg-gray-200 flex-1 m-1 rounded-lg" style={{ minHeight: '200px' }}>
+                <div key={index} className="relative group bg-gray-200 flex-1 m-2 rounded-lg" style={{ minHeight: '280px' }}>
                   {/* Container cho ảnh */}
                   <div className="relative w-full h-full" style={{ paddingBottom: '100%' }}>
                     <img
@@ -100,7 +100,7 @@ const MasonryGrid: React.FC = () => {
                   </div>
 
                   {/* Overlay hiển thị thông tin khi hover */}
-                  <div className="absolute inset-0 bg-black p-2 bg-opacity-80 text-white opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-opacity duration-300">
+                  <div className="text-center absolute inset-0 bg-black p-2 bg-opacity-80 text-white opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-opacity duration-300">
                     <h3 className="text-lg font-semibold mb-2">{image.name}</h3>
                     <p className="text-sm">{image.info}</p>
                   </div>

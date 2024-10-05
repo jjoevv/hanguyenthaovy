@@ -32,8 +32,8 @@ const Header: React.FC = () => {
     }, [lastScrollY]);
 
   return (
-    <header className={`fixed w-full z-20 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'} transition-all duration-300`}>
-      <nav className="flex justify-between items-center px-4 py-4 md:px-24">
+    <header className={`fixed w-full z-50 ${!isScrolled ? 'bg-white shadow-md' : 'hidden'} transition-all duration-300`}>
+      <nav className="flex justify-between items-center px-4 py-2 md:px-24">
         {/* Logo or Site Name */}
         <Link to='/' className="text-2xl font-bold text-black">My Portfolio</Link>
 
@@ -58,21 +58,21 @@ const Header: React.FC = () => {
           <Link 
             to="/" 
             onClick={() => setIsOpen(false)} 
-            className="text-2xl font-medium text-black my-6 hover:animate-spin"
+            className="text-2xl font-medium text-black my-6 hover:animate-spin hover:text-dark-green"
           >
             Home
           </Link>
           <Link 
             to="/projects" 
             onClick={() => setIsOpen(false)} 
-            className="text-2xl font-medium text-black my-6"
+            className="text-2xl font-medium text-black my-6 hover:text-dark-green"
           >
             Projects
           </Link>
           <Link 
             to="/contact" 
             onClick={() => setIsOpen(false)} 
-            className="text-2xl font-medium text-black my-6"
+            className="text-2xl font-medium text-black my-6 hover:text-dark-green"
           >
             Contact
           </Link>
@@ -80,9 +80,9 @@ const Header: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className="text-lg font-medium text-black hover:text-gray-700 p-4 transition duration-0 hover:duration-700 hover:border-b-4 border-brunswick-green ">Home</Link>
-          <Link to="/projects" className="text-lg font-medium text-black hover:text-gray-700 p-4 transition duration-0 hover:duration-700 hover:border-b-4 border-brunswick-green">Projects</Link>
-          <Link to="/contact" className="text-lg font-medium text-black hover:text-gray-700 p-4 transition duration-0 hover:duration-700 hover:border-b-4 border-brunswick-green">Contact</Link>
+          <Link to="/" className="text-lg font-medium text-black hover:text-gray-700 p-4 transition duration-0 hover:duration-400 hover:border-b-4 border-brunswick-green hover:text-dark-green">Home</Link>
+          <Link to="/projects" className="text-lg font-medium text-black hover:text-gray-700 p-4 transition duration-0 hover:duration-400 hover:border-b-4 border-brunswick-green hover:text-dark-green">Projects</Link>
+          <Link to="/contact" className="text-lg font-medium text-black hover:text-gray-700 p-4 transition duration-0 hover:duration-400 hover:border-b-4 border-brunswick-green hover:text-dark-green">Contact</Link>
         </div>
       </nav>
     </header>
