@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { informationData } from '../data/information';
 import backgroundImage from '../assets/imgs/bg.png';
 import SuccessMessage from '../components/SuccessMessage';
+import ViewResumeButton from '../components/ViewResume';
 
 const serviceId = import.meta.env.BASE_URL_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -92,10 +93,14 @@ const validateForm = (): boolean => {
         <p className="text-lg mt-8 text-black-700">
           <strong>Address:</strong> {informationData.contactInfo.address}
         </p>
+        <p className="text-lg mt-8 text-black-700">
+          <strong>Resume:</strong> 
+          <ViewResumeButton/>
+        </p>
       </div>
 
       {/* Cột 2: Input box */}
-      <div className="flex flex-col mt-auto mb-6 mx-16 p-8 w-100 col-span-2 bg-gray-900 opacity-80">
+      <div className="flex flex-col mt-auto mb-6 md:mx-16 p-8 w-100 col-span-2 bg-gray-900 opacity-80">
         <div className="mt-4">
           <h2 className="text-2xl font-bold mb-4 text-white">Send me a message</h2>
           <h2 className="text-xl mb-4 text-white">Let's work together to build something great.</h2>

@@ -9,6 +9,7 @@ import conf7 from '../assets/imgs/conf7.png'
 import conf8 from '../assets/imgs/conf8.png'
 import conf9 from '../assets/imgs/conf9.png'
 import conf10 from '../assets/imgs/conf10.png'
+import conf11 from '../assets/imgs/conf11.png'
 
 import web_pet1 from '../assets/imgs/petshop_web1.png'
 import web_pet2 from '../assets/imgs/petshop_web2.png'
@@ -29,6 +30,17 @@ import petshop_app2 from '../assets/imgs/petshop_app2.png'
 import petshop_app3 from '../assets/imgs/petshop_app3.png'
 import petshop_app4 from '../assets/imgs/petshop_app4.png'
 import petshop_app5 from '../assets/imgs/petshop_app5.gif'
+
+import chatapp1 from '../assets/imgs/chatapp1.png'
+import chatapp2 from '../assets/imgs/chatapp2.png'
+import chatapp3 from '../assets/imgs/chatapp3.png'
+import chatapp4 from '../assets/imgs/chatapp4.png'
+import chatapp5 from '../assets/imgs/chatapp5.png'
+import chatapp6 from '../assets/imgs/chatapp6.png'
+import chatapp7 from '../assets/imgs/chatapp7.png'
+import chatapp8 from '../assets/imgs/chatapp8.png'
+
+
 
 export interface ContentSection {
   title: string;
@@ -83,7 +95,7 @@ export const projectsData: ProjectDetail[] = [
         "Choose suitable technologies for development, using Agile methodology and Client-Server architecture. Focus on scientific conferences, gathering key information such as dates, locations, and submission deadlines from the ICORE Conference Portal. Design a structured database and define essential features based on survey feedback.",
         "Program the user interface and gather ongoing feedback from team members and instructors until the final version is completed."
       ],
-      image: [conf10],
+      image: [conf11, conf10],
       isProcess: true
     },
     overview: {
@@ -375,7 +387,89 @@ export const projectsData: ProjectDetail[] = [
       },
     ]
   },
-  // Thêm nhiều dự án khác tại đây
+  {
+    name: "Chat Interface",
+    link: "chatapp",
+    image1: chatapp1,
+    image2: chatapp1,
+    sketch: {
+      isSketch: false,
+      image: '',
+      content: []
+    },
+    process: {
+      content: [
+        "The project emphasizes management methods, resulting in a scaled-down software solution that is a single app featuring only basic functionalities.",
+        "In this project, we learned how to manage software development projects effectively using the Agile model. The process begins with an executive summary outlining goals and objectives. Research and analysis follow, identifying user needs and key features. A detailed project plan is developed, focusing on iterative development with clear milestones and deliverables.",
+
+"We engage in sprint planning, where wireframing and prototyping help visualize the interface, followed by UX/UI design. As the person responsible for the user interface, I created a user-friendly and visually appealing design while actively participating in frontend development.",
+
+"During each sprint, the interface and functionality are built incrementally. Testing and QA are integrated throughout the development process, ensuring smooth operation across devices. After collecting feedback from stakeholders, we refine the product before the release. Finally, post-launch monitoring tracks performance for continuous improvement."
+      ],
+      image: [chatapp2, chatapp3],
+      isProcess: true
+    },
+    introduction: 'This project is a web design for a chat interface website, developed as part of a project management course.',
+    overview: {
+      overview: "This project is a web design for a chat interface website, created in project management course.The interface design is an integral part of the entire process, focusing on creating an intuitive and visually appealing experience for users. Throughout the project, we aimed to ensure the design aligns with user needs while enhancing usability and functionality, from concept development to final implementation.",
+      role: 'UX/UI Designer, Frontend Developer, Tester',
+      scope: '15 weeks course',
+      tools: 'Figma, ReactJS'
+    },
+    contentSections: [
+      {
+        title: "Main screen ",
+        paragraphs: [],
+        image: {
+          src: chatapp4,
+          full: false
+        }
+      },
+
+      {
+        title: "Personal Messaging Screen",
+        paragraphs: [
+          "The personal messaging screen allows users to engage in one-on-one conversations with their friends. Users can view a chat history, send real-time text messages, and share multimedia content like images and videos.",
+          "The interface is designed for ease of use, featuring a text input field for composing messages and a send button for immediate delivery. Users can also see the online status of their contacts, enhancing the communication experience.",
+        ],
+        image: {
+          src: chatapp5,
+          full: false
+        }
+      },
+      {
+        title: "Add friend feature",
+        paragraphs: [
+          " an icon is provided for quickly searching for friends and sending friend requests, streamlining the connection process."
+        ],
+        image: {
+          src: chatapp6,
+          full: false
+        }
+      },
+      {
+        title: "Group Chat",
+        paragraphs: [
+          "The group creation feature enables users to form chat groups for collective conversations. Users can name the group, add multiple friends from their contact list, and create a dedicated space for group discussions.",
+          "The interface provides options to manage group members, including the ability to remove participants or change group settings. Notifications for new messages within the group ensure that all members stay updated on ongoing conversations."
+        ],
+        image: {
+          src: chatapp7,
+          full: false
+        }
+      },
+      {
+        title: "Create Group Chat",
+        paragraphs: [
+          "A button allows users to easily initiate group chats.",
+        ],
+        image: {
+          src: chatapp8,
+          full: false
+        }
+      },
+    ]
+  },
 ];
 
 export default projectsData

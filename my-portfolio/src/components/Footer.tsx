@@ -6,7 +6,7 @@ export const Footer = () => {
     const location = useLocation()
 
     return (
-        <footer className="bg-night opacity-90 text-white py-10 md:mt-20 flex items-center justify-center h-[60vh]">
+        <footer className="bg-night opacity-90 text-white py-10 pt-40 flex items-center justify-center h-[60vh]">
 
             <div className='grid md:grid-cols-2 grid-cols-1 w-2/3'>
                 <div className="text-4xl col-span-2">

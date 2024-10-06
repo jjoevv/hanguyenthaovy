@@ -43,4 +43,16 @@ body {
     }
   }
   
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Điều này đảm bảo rằng carousel sẽ trượt đến giữa danh sách ảnh */
+    }
+  }
+  
+  .animate-slide {
+    animation: slide linear infinite;
+  }
   

@@ -4,8 +4,8 @@ import backgroundImage from './../assets/imgs/bg.png'
 import ProjectSection from '../components/ProjectSection';
 import InformationSection from '../components/InformationSection';
 import ScrollToSections from '../components/ScrollToSection';
-import MasonryGrid from '../components/MasonryGrid';
 import WelcomeSection from '../components/WelcomeSection';
+import Carousel from '../components/ImageCarousel';
 
 
 
@@ -30,7 +30,8 @@ const Home: React.FC = () => {
         <ProjectSection/>
 
         {/* Phần images List */}
-        <MasonryGrid/>
+        <Carousel/>
+        
 
         {/* Phần Scroll to sections */}
         <ScrollToSections/>

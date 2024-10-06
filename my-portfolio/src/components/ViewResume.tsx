@@ -5,7 +5,7 @@ import cv from '../assets/HaNguyenThaoVy.pdf'; // Import the PDF file
 
 const ViewResumeButton = () => {
   return (
-    <div className="container flex justify-start" >
+    <div className=" flex justify-start" >
       {/* Button to open PDF */}
       <div className="flex items-center justify-center py-2">
         <a 

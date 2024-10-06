@@ -19,7 +19,7 @@ const ProjectDetailPage: React.FC = () => {
 
 
   return (
-    <div className="w-full mx-auto py-20  md:px-40 bg-slate-50"
+    <div className="w-full  mx-auto py-20  md:px-40 bg-slate-50"
       style={{
         backgroundAttachment: 'fixed', // Giữ hình nền cố định khi cuộn
         backgroundImage: `url(${backgroundImage})`, // Đặt hình nền
@@ -34,7 +34,7 @@ const ProjectDetailPage: React.FC = () => {
         </div>
       </div>
 
-      <div className='w-full mx-auto flex flex-col md:flex-row my-20 py-20'>
+      <div className='w-full mx-auto flex flex-col md:flex-row md:my-20 md:py-20 p-10'>
         <div className="hidden md:flex md:flex-col md:w-1/4 ">
           <h2 className="text-2xl -translate-x-1/2 text-gray-400 md:text-4xl lg:text-6xl lg:sticky top-60 transform rotate-90 whitespace-nowrap font-bold  ">
             Overview
@@ -75,13 +75,13 @@ const ProjectDetailPage: React.FC = () => {
                   <p key={i} className="mb-4 text-lg leading-relaxed">{paragraph}</p>
                 ))}
               </div>
-              <div className='flex flex-col'>
+              <div className=''>
                 {
                   project.process.image.map((img,i)=>(
                     <img
                     key={i}
                     src={img}
-                    className={`h-[] object-cover rounded-lg my-4`}
+                    className={`md:h-[70vh] w-auto object-contain rounded-lg my-4`}
                   />
                   ))
                 }
@@ -94,7 +94,7 @@ const ProjectDetailPage: React.FC = () => {
       </div>
 
 
-      <div className=' mx-auto flex w-full md:flex-row py-10'>
+      <div className=' mx-auto flex w-full md:flex-row md:py-20 p-10'>
         <div className="hidden md:flex md:flex-col md: md:w-1/4">
           <h2 className="text-2xl -translate-x-1/2 text-gray-400 md:text-4xl lg:text-6xl lg:sticky top-60 transform rotate-90 whitespace-nowrap font-bold ">
             Design
@@ -112,7 +112,7 @@ const ProjectDetailPage: React.FC = () => {
               </div>
             <img
               src={project.sketch.image}
-              className={`h-[60vh] object-cover rounded-lg`}
+              className={`md:h-[60vh] object-contain rounded-lg`}
             />
         </div>
       )}
@@ -135,7 +135,7 @@ const ProjectDetailPage: React.FC = () => {
                   <img
                     src={section.image.src}
                     alt={section.title}
-                    className={`${section.image.full ? 'w-full h-auto' : 'h-[60vh] object-cover'} rounded-lg`}
+                    className={`${section.image.full ? 'w-full h-auto' : 'md:h-[60vh] object-contain'} rounded-lg`}
                   />
                 </div>
               )}

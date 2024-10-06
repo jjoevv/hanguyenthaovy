@@ -33,13 +33,13 @@ const InformationSection = () => {
     <section id="information" ref={sectionRef} className="py-12">
 
        
-            <div className={`p-7 bg-white w-full  flex justify-center items-center px-auto
+            <div className={`p-7 bg-white w-full flex justify-center items-center px-auto
               transition-transform duration-1000 ease-in-out ${isVisible ? 'transform translate-y-10 ' : 'transform translate-y-20 opacity-0'}
             `}>
         <div className=" mx-auto grid grid-cols-1 md:grid-cols-4 bg-gray-700 rounded text-white py-12 m-1 md:mx-20">
           
           {/* Cột 1: Mục tiêu, Thông tin giáo dục và Biểu tượng công cụ */}
-          <div className="col-span-2 flex-1 p-4 flex flex-col mr-10">
+          <div className="md:col-span-2 flex-1 p-4 flex flex-col md:mr-10">
             <div className='md:pl-8'>
               <div>
                 <h2 className="text-2xl font-semibold mb-4 italic text-start ">Objective</h2>
@@ -74,7 +74,7 @@ const InformationSection = () => {
           </div>
 
           {/* Cột 2: Kỹ năng mềm và Bộ kỹ năng */}
-          <div className="flex-1  py-4">
+          <div className="flex-1  md:py-4 p-4">
             <h2 className="text-2xl font-semibold mb-4 italic">Soft Skills</h2>
             <ul className="list-disc pl-5 mb-4">
               {informationData.softSkills.map((skill, index) => (
@@ -91,7 +91,7 @@ const InformationSection = () => {
 
             {/* Công Cụ */}
             <h3 className="text-xl font-semibold mb-2 italic">Tools</h3>
-            <div className="flex">
+            <div className="w-full flex md:justify-start justify-center items-center">
               {informationData.tools.map((tool, index) => (
                 <img src={tool} key={index} className='h-8 mx-2 object-cover'/>
               ))}
@@ -101,14 +101,12 @@ const InformationSection = () => {
 
           </div>
 
-          <div className='flex-1 '>
-              <div>
-                <img src={art} className=' w-[80%] h-auto object-cover object-cover'/>
+          <div className='flex-1 md:p-0 p-4 sm:flex flex-col md:justify-start justify-center items-center'>
+                <img src={art} className=' w-[80%] h-auto object-cover '/>
                 
-              <div className='mt-8'>
+              <div className='mt-8 '>
               <h2 className="text-2xl font-semibold mb-4 italic text-start ">Resume</h2>
-                <ViewResumeButton/>
-              </div>
+                <div className='w-full flex justify-center items-center'><ViewResumeButton/></div>
               </div>
           </div>
         </div>
