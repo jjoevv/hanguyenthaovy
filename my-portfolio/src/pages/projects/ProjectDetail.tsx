@@ -3,7 +3,7 @@ import { projectsData } from '../../data/projects';
 import { useEffect } from 'react';
 import BackToHomePageButton from '../../components/BackToHomePageButton';
 import backgroundImage from '../../assets/imgs/bg.png'
-import ScrollToTop from '../../components/ScrollToTop';
+import ScrollToTopButton from '../../components/ScrollToTopButton';
 
 const ProjectDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Get the project ID from the URL
@@ -11,7 +11,7 @@ const ProjectDetailPage: React.FC = () => {
 
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+   window.scrollTo(0, 0); // Scroll to the top of the page
   }, []);
   if (!project) {
     return <div>Project not found</div>;
@@ -28,9 +28,9 @@ const ProjectDetailPage: React.FC = () => {
       }}
     >
       <div className='bg-white p-2'>
-        <h1 className="lg:my-10 text-5xl font-bold flex justify-center">{project.name}</h1>
-        <div className='w-full flex justify-center lg:my-10'>
-          <img src={project.image2} className='h-[60vh]' />
+        <h1 className="lg:my-10 text-5xl font-bold flex justify-center text-center">{project.name}</h1>
+        <div className='flex justify-center lg:my-10'>
+          <img src={project.image2} className='lg:h-[60vh] md:h-[60vh] scale-110  object-contain mt-4' />
         </div>
       </div>
 
@@ -94,10 +94,10 @@ const ProjectDetailPage: React.FC = () => {
       </div>
 
 
-      <div className=' mx-auto flex w-full md:flex-row md:py-20 p-10'>
-        <div className="hidden md:flex md:flex-col md: md:w-1/4">
-          <h2 className="text-2xl -translate-x-1/2 text-gray-400 md:text-4xl lg:text-6xl lg:sticky top-60 transform rotate-90 whitespace-nowrap font-bold ">
-            Design
+      <div className=' mx-auto flex w-full md:flex-row flex-col md:py-20 p-10'>
+        <div className=" md:flex md:flex-col md: md:w-1/4">
+          <h2 className="text-4xl text-dark-green lg:-translate-x-1/2 md:text-gray-400 md:text-4xl lg:text-6xl lg:sticky lg:top-60 transform lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
+            Protoype
           </h2>
         </div>
 
@@ -131,7 +131,7 @@ const ProjectDetailPage: React.FC = () => {
 
               {/* Image Section */}
               {section.image && (
-                <div className="w-full flex my-6 p-4 bg-white justify-center">
+                <div className="w-full flex my-6 lg:p-4 md:p-4 bg-white justify-center">
                   <img
                     src={section.image.src}
                     alt={section.title}
@@ -147,7 +147,7 @@ const ProjectDetailPage: React.FC = () => {
 
      
       <BackToHomePageButton />
-      <ScrollToTop/>
+      <ScrollToTopButton/>
     </div>
   );
 };

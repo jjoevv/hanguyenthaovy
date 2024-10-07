@@ -33,7 +33,7 @@ const InformationSection = () => {
     <section id="information" ref={sectionRef} className="py-12">
 
        
-            <div className={`p-7 bg-white w-full flex justify-center items-center px-auto
+            <div className={`md:p-7 bg-white w-full flex justify-center items-center px-auto
               transition-transform duration-1000 ease-in-out ${isVisible ? 'transform translate-y-10 ' : 'transform translate-y-20 opacity-0'}
             `}>
         <div className=" mx-auto grid grid-cols-1 md:grid-cols-4 bg-gray-700 rounded text-white py-12 m-1 md:mx-20">

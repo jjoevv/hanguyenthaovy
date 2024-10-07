@@ -21,15 +21,7 @@ module.exports = {
       rotate: {
         '270': '270deg',
       },
-      animation: {
-        'infinite-scroll': 'infinite-scroll 52s linear infinite',
-      },
-      keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
-        }
-      }     
+     
     },
   },
   plugins: [],

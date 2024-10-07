@@ -1,45 +1,31 @@
-import { useState, useEffect } from 'react';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Show button when page is scrolled down
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  // Scroll to the top smoothly
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+    const storedPosition = window.history.state?.scrollPosition;
+    if (storedPosition !== undefined) {
+      window.scrollTo(0, storedPosition);
+    } else {
+      window.scrollTo(0, 0); // Mặc định scroll to top nếu không có trạng thái cuộn trước đó
+    }
 
-  return (
-    <div className="fixed bottom-5 right-5 z-50">
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          title='Go to top'
-          className="p-3 bg-brunswick-green text-white rounded-full shadow-lg hover:bg-green-800 focus:outline-none transition duration-300"
-        >
-          <FontAwesomeIcon icon={faArrowUp} className="w-5 h-5" />
-        </button>
-      )}
-    </div>
-  );
+    // Lưu vị trí cuộn khi người dùng rời trang
+    const handleBeforeUnload = () => {
+      const currentScrollPosition = window.scrollY;
+      navigate(pathname, { state: { scrollPosition: currentScrollPosition }, replace: true });
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [pathname, navigate]);
+
+  return null;
 };
 
-export default ScrollToTop;
+export default ScrollToTop

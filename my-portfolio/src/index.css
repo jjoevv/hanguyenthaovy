@@ -43,16 +43,44 @@ body {
     }
   }
   
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%); /* Điều này đảm bảo rằng carousel sẽ trượt đến giữa danh sách ảnh */
+
+  @media (max-width: 768px) {
+    /* Đối với màn hình nhỏ hơn, như điện thoại di động */
+    .responsive-mask {
+      mask-image: linear-gradient(to right, transparent 0, black 14px, black calc(100% - 64px), transparent 100%);
     }
   }
   
-  .animate-slide {
-    animation: slide linear infinite;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Đối với màn hình kích thước trung bình, như máy tính bảng */
+    .responsive-mask {
+      mask-image: linear-gradient(to right, transparent 0, black 96px, black calc(100% - 96px), transparent 100%);
+    }
   }
   
+  @media (min-width: 1025px) {
+    /* Đối với màn hình lớn hơn, như desktop */
+    .responsive-mask {
+      mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%);
+    }
+  }
+  
+
+  /* Add these styles to your global CSS */
+.animate-infinite-scroll {
+  animation: infinite-scroll 52s linear infinite;
+}
+
+.paused .animate-infinite-scroll {
+  animation-play-state: paused; /* Pause animation when hovered */
+}
+
+/* Animation Keyframes */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

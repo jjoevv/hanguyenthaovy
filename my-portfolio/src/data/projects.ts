@@ -105,7 +105,7 @@ export const projectsData: ProjectDetail[] = [
       tools: 'Figma, ReactJS, Bootstrap'
     },
     contentSections: [
-      
+
       {
         title: "Homepage",
         paragraphs: [
@@ -184,7 +184,7 @@ export const projectsData: ProjectDetail[] = [
         }
       },
       {
-        title: "Section 8",
+        title: "Admin role - Import conferences list file",
         paragraphs: [
           "This import feature allows admins to upload a list of conference information for the system to crawl. After uploading a file, the admin selects the necessary data columns for import.",
           "During the crawling process, a progress table tracks the status, displaying descriptions and an error column for any encountered issues. The admin can pause the crawling for conferences in a waiting state.",
@@ -215,13 +215,13 @@ export const projectsData: ProjectDetail[] = [
       content: [
         "Research and Ideation: Conduct research to understand pet owners' needs, analyze competitors, and identify key problems. Use this insight to brainstorm and generate design ideas.",
 
-      "Sketching and Wireframing: Create initial sketches and wireframes to map out the structure of key features, like pet adoption, services, and product purchases, focusing on smooth user navigation.",
+        "Sketching and Wireframing: Create initial sketches and wireframes to map out the structure of key features, like pet adoption, services, and product purchases, focusing on smooth user navigation.",
 
-      "UI Design: Develop high-fidelity designs that reflect the brand, ensuring a visually appealing and user-friendly interface across all screens.",
+        "UI Design: Develop high-fidelity designs that reflect the brand, ensuring a visually appealing and user-friendly interface across all screens.",
 
-      "Testing and Evaluation: Test the website with real users, gather feedback, and iterate to enhance usability and functionality, ensuring an intuitive experience for pet owners.",
+        "Testing and Evaluation: Test the website with real users, gather feedback, and iterate to enhance usability and functionality, ensuring an intuitive experience for pet owners.",
 
-      "Here is the use case diagram and the process from sketch to final design."
+        "Here is the use case diagram and the process from sketch to final design."
       ],
       image: [web_pet3, web_pet4],
       isProcess: true
@@ -244,7 +244,7 @@ export const projectsData: ProjectDetail[] = [
           full: true
         }
       },
-      
+
       {
         title: "Adoption & Service page",
         paragraphs: [
@@ -293,7 +293,7 @@ export const projectsData: ProjectDetail[] = [
         paragraphs: [
           "The Add to Cart feature allows users to easily select products they wish to purchase and store them in their virtual shopping cart for later review or checkout. This function enables users to continue browsing without losing their selections.",
           "The Buy Now option provides a streamlined purchasing process, allowing users to skip the cart and directly proceed to checkout for immediate payment, enhancing convenience for those who want to complete their purchase quickly. Both functions are designed to facilitate a smooth and efficient shopping experience on the site.",
-          
+
         ],
         image: {
           src: web_pet9,
@@ -305,8 +305,8 @@ export const projectsData: ProjectDetail[] = [
         paragraphs: [
           "The Direct Payment feature allows users to make immediate purchases through a streamlined checkout process, ensuring a quick and efficient transaction.",
           "Additionally, the Online Payment via QR Code functionality enables users to complete their payments conveniently by scanning a generated QR code with their mobile devices",
-          
-          
+
+
         ],
         image: {
           src: web_pet10,
@@ -402,9 +402,9 @@ export const projectsData: ProjectDetail[] = [
         "The project emphasizes management methods, resulting in a scaled-down software solution that is a single app featuring only basic functionalities.",
         "In this project, we learned how to manage software development projects effectively using the Agile model. The process begins with an executive summary outlining goals and objectives. Research and analysis follow, identifying user needs and key features. A detailed project plan is developed, focusing on iterative development with clear milestones and deliverables.",
 
-"We engage in sprint planning, where wireframing and prototyping help visualize the interface, followed by UX/UI design. As the person responsible for the user interface, I created a user-friendly and visually appealing design while actively participating in frontend development.",
+        "We engage in sprint planning, where wireframing and prototyping help visualize the interface, followed by UX/UI design. As the person responsible for the user interface, I created a user-friendly and visually appealing design while actively participating in frontend development.",
 
-"During each sprint, the interface and functionality are built incrementally. Testing and QA are integrated throughout the development process, ensuring smooth operation across devices. After collecting feedback from stakeholders, we refine the product before the release. Finally, post-launch monitoring tracks performance for continuous improvement."
+        "During each sprint, the interface and functionality are built incrementally. Testing and QA are integrated throughout the development process, ensuring smooth operation across devices. After collecting feedback from stakeholders, we refine the product before the release. Finally, post-launch monitoring tracks performance for continuous improvement."
       ],
       image: [chatapp2, chatapp3],
       isProcess: true

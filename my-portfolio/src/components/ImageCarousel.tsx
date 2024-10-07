@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { images } from '../data/images';
 
 const imageList = [
@@ -19,100 +19,57 @@ const imageList = [
 
 const ImageCarousel = () => {
   const ulRef = useRef<HTMLUListElement | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const [isHoveredIndex, setIsHoveredIndex] = useState<number | null>(null); // State để theo dõi chỉ số của hình ảnh đang hover
+  
 
-  // Hàm cuộn tự động
-  const autoScroll = () => {
-    if (ulRef.current && isHoveredIndex === null) { // Chỉ cuộn khi không có hình ảnh nào đang được hover
-      ulRef.current.scrollBy({
-        left: 1,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  useEffect(() => {
-    const ul = ulRef.current;
-
-    // Nhân đôi danh sách hình ảnh
-    if (ul) {
-      const clonedUl = ul.cloneNode(true) as HTMLElement; // Nhân bản danh sách
-      ul.insertAdjacentElement('afterend', clonedUl); // Chèn vào DOM
-      clonedUl.setAttribute('aria-hidden', 'true');
-    }
-
-    // Bắt đầu auto scroll
-    intervalRef.current = setInterval(autoScroll, 20);
-
-    // Dọn dẹp interval khi component unmount
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, []);
+ 
 
   const handleMouseEnter = (index: number) => {
-    setIsHoveredIndex(index); // Đặt chỉ số hình ảnh đang hover
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current); // Dừng auto scroll khi hover
-    }
+    setIsHoveredIndex(index); // Set the index of the hovered image
   };
 
   const handleMouseLeave = () => {
-    setIsHoveredIndex(null); // Đặt lại chỉ số hình ảnh đang hover
-    intervalRef.current = setInterval(autoScroll, 20); // Bắt đầu lại auto scroll
+    setIsHoveredIndex(null); // Reset the hover state
   };
 
   return (
-    <section id="projects" className="">
-      <div className="container mx-auto flex flex-col md:flex-row">
+    <section id="design" className="md:mt-60 mb-40">
+      <div className="container mx-auto flex md:items-center items-start justify-center md:flex-row flex-col">
         {/* Cột 1: Latest Projects */}
-        <div className="hidden md:flex md:flex-col md:sticky md:top-0 md:h-screen md:items-center md:justify-center md:w-1/5">
-          <h2 className="text-2xl text-gray-500 md:text-4xl lg:text-6xl transform rotate-90 whitespace-nowrap font-bold ">
+        <div className=" md:flex md:flex-col md:w-1/5">
+          <h2 className="text-2xl text-dark-green  md:text-gray-400 md:text-4xl lg:text-6xl lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
             Other Designs
           </h2>
         </div>
         <div
-      className="inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
-      onMouseLeave={handleMouseLeave}
-    >
-      <ul
-        ref={ulRef}
-        className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
-      >
-        {imageList.map((image, index) => (
-          <li key={index} className="relative p-2" onMouseEnter={() => handleMouseEnter(index)}>
-            <img src={image.src} alt={image.name} className='h-[40vh] object-contain' />
-            {/* Hiển thị thông tin khi hover */}
-            {isHoveredIndex === index && (
-              <div className="absolute bottom-0 left-0 bg-black text-white p-2 opacity-100 transition-opacity duration-300">
-                <h3>{image.name}</h3>
-                <p>{image.info}</p>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-      <ul
-        className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
-        aria-hidden="true"
-      >
-        {imageList.map((image, index) => (
-          <li key={index} className="relative" onMouseEnter={() => handleMouseEnter(index)}>
-            <img src={image.src} alt={image.name} className='ml:h-[60vh] md:h-[60vh] h-[50vh] object-contain' />
-            {/* Hiển thị thông tin khi hover */}
-            {isHoveredIndex === index && (
-              <div className="absolute bottom-0 left-0 bg-black text-white p-2 opacity-100 transition-opacity duration-300">
-                <h3>{image.name}</h3>
-                <p>{image.info}</p>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
+          className={`inline-flex flex-nowrap overflow-hidden responsive-mask ${isHoveredIndex !== null ? 'paused' : ''}`}
+          onMouseOut={handleMouseLeave}
+          onMouseLeave={handleMouseLeave}
+        >
+          <ul
+            ref={ulRef}
+            className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+          >
+            {imageList.map((image, index) => (
+              <li key={index} className="relative p-2 group block" 
+              onMouseEnter={() => handleMouseEnter(index)}
+              onClick={()=>handleMouseEnter(index)}
+              >
+                <img src={image.src} alt={image.name} onMouseEnter={() => handleMouseEnter(index)} className="inset-0 h-[40vh] object-contain" />
+                {/* Hiển thị thông tin khi hover */}
+                {isHoveredIndex === index && (
+                  <div 
+                  onMouseEnter={() => handleMouseEnter(index)} 
+                  onClick={()=>handleMouseEnter(index)}
+                  className="select-none absolute bottom-0 left-0 bg-black text-white p-2 opacity-80 transition-opacity duration-300">
+                    <h3>{image.name}</h3>
+                    <p>{image.info}</p>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       
       </div>
     </section>

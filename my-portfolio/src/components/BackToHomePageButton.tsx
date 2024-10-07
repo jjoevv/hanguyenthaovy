@@ -8,7 +8,7 @@ const BackToHomePageButton = () => {
     const [hoveredSection, setHoveredSection] = useState<boolean | null>(null);
 
   return (
-     <div className="container self-start left-1 fixed bottom-6 flex justify-center items-center">
+     <div className="container left-0 self-start fixed bottom-8 flex justify-center items-center">
         
      {/* Back button */}
      <div 

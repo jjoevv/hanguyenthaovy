@@ -53,11 +53,11 @@ const ProjectSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="projects" className="py-12">
+    <section id="projects" className="pt-12 md:mt-20 md:mb-30">
       <div className="container mx-auto flex flex-col md:flex-row">
         {/* Cột 1: Latest Projects */}
-        <div className="hidden md:flex md:flex-col md:sticky md:top-0 md:h-screen md:items-center md:justify-center md:w-1/5">
-          <h2 className="text-2xl text-gray-500 md:text-4xl lg:text-6xl transform rotate-90 whitespace-nowrap font-bold ">
+        <div className=" md:flex md:flex-col md:sticky md:top-0 md:h-screen md:items-center md:justify-center md:w-1/5">
+        <h2 className="text-2xl text-dark-green  md:text-gray-400 md:text-4xl lg:text-6xl lg:sticky lg:top-40 transform lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
             Latest Projects
           </h2>
         </div>
@@ -69,7 +69,7 @@ const ProjectSection: React.FC = () => {
               key={project.name}
               ref={(el) => (projectRefs.current[index] = el)}
               data-index={index}
-              className={`grid  md:grid-cols-2 w-full md:h-screen  md:items-center sm:grid-rows-2 sm:mt-20 transition-transform duration-700 ease-in-out transform ${visibleProjects.includes(index) ? 'scale-100' : 'scale-95'}
+              className={`grid  md:grid-cols-2 w-full md:h-screen  md:items-center sm:grid-rows-2 md:mt-0 mt-20 transition-transform duration-700 ease-in-out transform ${visibleProjects.includes(index) ? 'scale-100' : 'scale-95'}
       ${zoomedProject === index ? 'relative z-50' : ''} `}
             >
               {/* Cột 2: Thông tin dự án */}
