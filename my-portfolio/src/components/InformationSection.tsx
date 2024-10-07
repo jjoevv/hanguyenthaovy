@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { informationData } from '../data/information'; // Đường dẫn đến file information
 import ViewResumeButton from './ViewResume';
 import art from '../assets/imgs/me.png'
+import { Link } from 'react-router-dom';
 
 const InformationSection = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
@@ -32,12 +33,12 @@ const InformationSection = () => {
   return (
     <section id="information" ref={sectionRef} className="py-12">
 
-       
-            <div className={`md:p-7 bg-white w-full flex justify-center items-center px-auto
+
+      <div className={`md:p-7 bg-white w-full flex justify-center items-center px-auto
               transition-transform duration-1000 ease-in-out ${isVisible ? 'transform translate-y-10 ' : 'transform translate-y-20 opacity-0'}
             `}>
         <div className=" mx-auto grid grid-cols-1 md:grid-cols-4 bg-gray-700 rounded text-white py-12 m-1 md:mx-20">
-          
+
           {/* Cột 1: Mục tiêu, Thông tin giáo dục và Biểu tượng công cụ */}
           <div className="md:col-span-2 flex-1 p-4 flex flex-col md:mr-10">
             <div className='md:pl-8'>
@@ -61,7 +62,16 @@ const InformationSection = () => {
                     onMouseEnter={() => setHoveredIcon(item.name)}
                     onMouseLeave={() => setHoveredIcon(null)}
                   >
-                  <img src={item.icon} className='h-8 w-8'/>
+                    {item.name === "Mail" ? (
+                      <Link to="/contact"> {/* Change the path to your actual contact page route */}
+                        <img src={item.icon} className='h-8 w-8' />
+                      </Link>
+                    ) : (
+                      <a href={item.type === "phone" ? `tel:${item.info}` : item.info} target={item.type === "link" ? "_blank" : "_self"} rel={item.type === "link" ? "noopener noreferrer" : undefined}>
+                        <img src={item.icon} className='h-8 w-8' />
+                      </a>
+                    )}
+
                     {hoveredIcon === item.name && (
                       <div className="absolute left-0 mt-2 p-2 bg-dark-green text-white rounded whitespace-nowrap">
                         {item.info}
@@ -93,25 +103,25 @@ const InformationSection = () => {
             <h3 className="text-xl font-semibold mb-2 italic">Tools</h3>
             <div className="w-full flex md:justify-start justify-center items-center">
               {informationData.tools.map((tool, index) => (
-                <img src={tool} key={index} className='h-8 mx-2 object-cover'/>
+                <img src={tool} key={index} className='h-8 mx-2 object-cover' />
               ))}
             </div>
 
-          
+
 
           </div>
 
           <div className='flex-1 md:p-0 p-4 sm:flex flex-col md:justify-start justify-center items-center'>
-                <img src={art} className=' w-[80%] h-auto object-cover '/>
-                
-              <div className='mt-8 '>
+            <img src={art} className=' w-[80%] h-auto object-cover ' />
+
+            <div className='mt-8 '>
               <h2 className="text-2xl font-semibold mb-4 italic text-start ">Resume</h2>
-                <div className='w-full flex justify-center items-center'><ViewResumeButton/></div>
-              </div>
+              <div className='w-full flex justify-center items-center'><ViewResumeButton /></div>
+            </div>
           </div>
         </div>
       </div>
-      
+
     </section>
   );
 };

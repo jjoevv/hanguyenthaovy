@@ -85,6 +85,9 @@ const validateForm = (): boolean => {
       <div className="flex flex-col justify-center items-start mx-auto mt-10  md:p-10">
         <h2 className="text-2xl font-bold mb-4 text-blue-800">Contact Information</h2>
         <p className="text-lg text-black-700">
+          <strong>Name:</strong> {informationData.contactInfo.name}
+        </p>
+        <p className="text-lg mt-8 text-black-700">
           <strong>Phone:</strong> {informationData.contactInfo.phone}
         </p>
         <p className="text-lg mt-8 text-black-700">
