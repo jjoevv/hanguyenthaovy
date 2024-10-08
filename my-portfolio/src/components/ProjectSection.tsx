@@ -63,7 +63,7 @@ const ProjectSection: React.FC = () => {
         </div>
 
         {/* Phần Các Dự Án */}
-        <div className="container h-auto flex-1 md:w-4/5 overflow-hidden gap-20">
+        <div className="container h-auto flex-1 md:w-4/5 overflow-hidden gap-20 md:mt-0 mt-10">
           {projectsData.map((project: ProjectDetail, index: number) => (
             <div
               key={project.name}
@@ -109,7 +109,7 @@ const ProjectSection: React.FC = () => {
                   <img
                     src={project.image1}
                     alt={project.name}
-                    className="h-[40vh] md:h-[50vh] w-full object-contain hover:scale-105 ease-in duration-150 cursor-pointer" // Make sure the height and width are consistent
+                    className=" w-full  md:h-[50vh] w-full object-contain hover:scale-105 ease-in duration-150 cursor-pointer" // Make sure the height and width are consistent
                   />
                 </picture>
               </div>

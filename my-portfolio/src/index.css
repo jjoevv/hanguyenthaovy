@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  max-width: 100%;
+}
+
 body {
   font-family: "SUSE", sans-serif;
   font-optical-sizing: auto;
+
 }
 
 /* Add this in your CSS file or as a style tag in your component */

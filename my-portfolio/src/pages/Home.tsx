@@ -29,9 +29,12 @@ const Home: React.FC = () => {
         {/* Phần Projects */}
         <ProjectSection/>
 
-        {/* Phần images List */}
-        <Carousel/>
-        
+        <div 
+      className='w-full overflow-hidden'>
+          {/* Phần images List */}
+          <Carousel/>
+          
+        </div>
 
         {/* Phần Scroll to sections */}
         <ScrollToSections/>

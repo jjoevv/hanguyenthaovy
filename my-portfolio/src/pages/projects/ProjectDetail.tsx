@@ -19,7 +19,7 @@ const ProjectDetailPage: React.FC = () => {
 
 
   return (
-    <div className="w-full  mx-auto py-20  md:px-40 bg-slate-50"
+    <div className="w-full  mx-auto py-20 overflow-x-hidden md:px-40 bg-slate-50"
       style={{
         backgroundAttachment: 'fixed', // Giữ hình nền cố định khi cuộn
         backgroundImage: `url(${backgroundImage})`, // Đặt hình nền
@@ -28,15 +28,15 @@ const ProjectDetailPage: React.FC = () => {
       }}
     >
       <div className='bg-white p-2'>
-        <h1 className="lg:my-10 text-5xl font-bold flex justify-center text-center">{project.name}</h1>
-        <div className='flex justify-center lg:my-10'>
+        <h1 className="lg:my-10 md:text-5xl text-4xl font-bold flex justify-center text-center">{project.name}</h1>
+        <div className='flex justify-center lg:my-10 md:mt-0 mt-10'>
           <img src={project.image2} className='lg:h-[60vh] md:h-[60vh] scale-110  object-contain mt-4' />
         </div>
       </div>
 
       <div className='w-full mx-auto flex flex-col md:flex-row md:my-20 md:py-20 p-10'>
-        <div className="hidden md:flex md:flex-col md:w-1/4 ">
-          <h2 className="text-2xl -translate-x-1/2 text-gray-400 md:text-4xl lg:text-6xl lg:sticky top-60 transform rotate-90 whitespace-nowrap font-bold  ">
+      <div className=" md:flex md:flex-col md:sticky md:top-0 md:h-screen md:items-center md:justify-center md:w-1/5">
+        <h2 className="hidden md:flex text-2xl text-dark-green  md:text-gray-400 md:text-4xl lg:text-6xl lg:sticky lg:top-40 transform lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
             Overview
           </h2>
         </div>
@@ -92,17 +92,7 @@ const ProjectDetailPage: React.FC = () => {
         </div>
 
       </div>
-
-
-      <div className=' mx-auto flex w-full md:flex-row flex-col md:py-20 p-10'>
-        <div className=" md:flex md:flex-col md: md:w-1/4">
-          <h2 className="text-4xl text-dark-green lg:-translate-x-1/2 md:text-gray-400 md:text-4xl lg:text-6xl lg:sticky lg:top-60 transform lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
-            Protoype
-          </h2>
-        </div>
-
-        <div className="w-full">
-        {project.sketch.isSketch && (
+      {project.sketch.isSketch && (
         <div className=" my-10 lg:col-span-2">
             <div className=''>
                 <h2 className="text-brunswick-green mb-5 border-brunswick-green text-4xl font-semibold pb-4 border-b-2 inline-block text-start">Sketches</h2>
@@ -116,6 +106,16 @@ const ProjectDetailPage: React.FC = () => {
             />
         </div>
       )}
+
+      <div className=' mx-auto flex w-full md:flex-row flex-col md:py-20 p-10'>
+        <div className=" md:flex md:flex-col md: md:w-1/4">
+          <h2 className="text-4xl text-dark-green lg:-translate-x-1/2 md:text-gray-400 md:text-4xl lg:text-6xl lg:sticky lg:top-60 transform lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
+            Protoype
+          </h2>
+        </div>
+
+        <div className="w-full">
+      
           {project.contentSections.map((section, index) => (
             <div
               key={index}
@@ -135,7 +135,7 @@ const ProjectDetailPage: React.FC = () => {
                   <img
                     src={section.image.src}
                     alt={section.title}
-                    className={`${section.image.full ? 'w-full h-auto' : 'md:h-[60vh] object-contain'} rounded-lg`}
+                    className={`${section.image.full ? 'w-full h-auto' : 'scale-105 object-contain'} rounded-lg`}
                   />
                 </div>
               )}

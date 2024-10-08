@@ -33,7 +33,7 @@ const ImageCarousel = () => {
   };
 
   return (
-    <section id="design" className="md:mt-60 mb-40">
+    <section id="design" className="md:mt-60 mb-40 ovverflow-x-hidden">
       <div className="container mx-auto flex md:items-center items-start justify-center md:flex-row flex-col">
         {/* Cột 1: Latest Projects */}
         <div className=" md:flex md:flex-col md:w-1/5">
