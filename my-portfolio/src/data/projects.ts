@@ -40,7 +40,15 @@ import chatapp6 from '../assets/imgs/chatapp6.png'
 import chatapp7 from '../assets/imgs/chatapp7.png'
 import chatapp8 from '../assets/imgs/chatapp8.png'
 
-
+import wellness1 from '../assets/imgs/wc1.png'
+import wellness2 from '../assets/imgs/wc2.png'
+import wellness3 from '../assets/imgs/wc3.png'
+import wellness4 from '../assets/imgs/wc4.png'
+import wellness5 from '../assets/imgs/wc5.png'
+import wellness6 from '../assets/imgs/wc6.png'
+import wellness7 from '../assets/imgs/wc7.png'
+import wellness8 from '../assets/imgs/wc8.png'
+import wellness9 from '../assets/imgs/wc9.png'
 
 export interface ContentSection {
   title: string;
@@ -383,6 +391,109 @@ export const projectsData: ProjectDetail[] = [
         image: {
           src: petshop_app5,
           full: false
+        }
+      },
+    ]
+  },
+  {
+    name: "Wellness Clinic",
+    link: "wellnessclinic",
+    image1: wellness8,
+    image2: wellness8,
+    sketch: {
+      isSketch: true,
+      image: wellness2,
+      content: [
+        'I use Illustrator for sketches because it allows for precise and scalable vector drawings, making it easy to experiment with different design ideas while maintaining clean lines.',
+        'Additionally, it offers flexibility in modifying elements quickly, which is crucial in the early stages of a project.'
+      ]
+    },
+    process: {
+      content: ['I chose a blue palette style for the Wellness Clinic website because blue is often associated with calmness, trust, and professionalism, which perfectly aligns with the clinic`s mission to promote health and well-being. The soothing shades of blue create a serene environment that encourages relaxation and reassurance for visitors.',
+                'Additionally, DM Sans is a modern, clean typeface that enhances readability and complements the overall aesthetic of the site. Its contemporary design helps convey a sense of friendliness and approachability, making it easier for users to engage with the content and navigate the website.'],
+      image: [wellness9],
+      isProcess: true
+    },
+    introduction: 'This is a Wellness Clinic website design project that I’m currently working on as part of a course on Udemy.',
+    overview: {
+      overview: "This project is part of a web design course on Udemy, with the goal of creating a fully functional and visually appealing website for a wellness clinic, progressing through various stages of design.It began with simple sketches to outline the core ideas and structure of the website. Wireframes were then developed to refine the layout and organize content, followed by the selection of a color palette and typography that conveyed the clinic's calming and professional atmosphere using soothing tones and legible fonts.The project concluded with the creation of a computer prototype, bringing together all design elements into an interactive model, allowing for testing and visualizing the final user experience.",
+      role: 'UX/UI Designer',
+      scope: '1 week',
+      tools: 'Figma, Illustrator'
+    },
+    contentSections: [
+      {
+        title: "Wireframe",
+        paragraphs: ['The wireframe for the Wellness Clinic website includes a comprehensive layout of the homepage, which features an introduction about the clinic, a section showcasing service offerings, and a list of recent posts.',
+          'The contact page is designed with a user-friendly form that requires essential information for inquiries or appointments.',
+          'The service page provides detailed information about each service, including descriptions, relevant images, and profiles of the staff members providing those services.',
+          'The blog page incorporates a categories filter, allowing users to easily navigate through topics, along with a list of posts. Finally, the post page displays the full content of a selected post, accompanied by a suggested list of related articles for further reading. This structured approach ensures a seamless user experience across the website.'],
+        image: {
+          src: wellness1,
+          full: false
+        }
+      },
+
+      {
+        title: "Homepage",
+        paragraphs: [
+          "The homepage of the Wellness Clinic website serves as a warm and inviting introduction to the clinic’s services and mission. It features a prominent hero section with a calming image and a call-to-action button, encouraging visitors to book appointments or explore the services offered.",
+
+"Below the hero section, a brief introduction highlights the clinic's commitment to enhancing health and well-being. This is followed by a visually appealing services offerings section that showcases key treatments, allowing users to quickly grasp the available options. Each service is presented with concise descriptions and inviting imagery.",
+
+"Additionally, the homepage includes a section dedicated to recent blog posts, providing valuable insights and tips related to wellness and health. This not only engages visitors but also establishes the clinic as a knowledgeable resource in the field. Overall, the homepage is designed to create a seamless user experience, guiding visitors toward their wellness journey.",
+        ],
+        image: {
+          src: wellness3,
+          full: true
+        }
+      },
+      {
+        title: "Service Detailed Page",
+        paragraphs: [
+          "The Service Detailed page of the Wellness Clinic website offers a comprehensive overview of the various wellness services available. It begins with a captivating header image and a bold service title, followed by a concise description that outlines the benefits and objectives of the service.",
+          "High-quality images illustrate the service in action, showcasing the clinic’s facilities and treatment process to build trust and reassure clients. A section dedicated to the staff members providing the service features brief profiles highlighting their qualifications and specialties, fostering a personal connection.",
+          "To facilitate easy booking, the page concludes with a clear call-to-action button, ensuring a smooth transition from information gathering to scheduling an appointment. This organized layout enhances user experience while supporting clients on their wellness journey."
+        ],
+        image: {
+          src: wellness4,
+          full: true
+        }
+      },
+      {
+        title: "Booking Appointment Page",
+        paragraphs: [
+          "The Booking page of the Wellness Clinic website is designed for easy appointment scheduling. It features a user-friendly booking form where visitors can enter their name, contact details, preferred date and time, and the desired services, streamlining the process for clients.",
+          "Additionally, the page includes important information such as the clinic's address for easy navigation, along with clear contact details for inquiries. Opening hours are prominently displayed, ensuring clients know when the clinic is available for appointments."
+        ],
+        image: {
+          src: wellness5,
+          full: true
+        }
+      },
+      {
+        title: "Blog page",
+        paragraphs: [
+          "The Blog page of the Wellness Clinic website serves as a valuable resource for visitors seeking wellness insights. It features a welcoming introduction and a categories filter at the left side, allowing users to navigate topics like nutrition, mental health, and fitness easily.",
+          "Below the filter, a visually appealing list of blog posts is displayed, each with captivating images and brief excerpts to entice readers. Each post offers in-depth content on its topic and concludes with a suggested list of related articles, encouraging further exploration and engagement with the clinic’s wellness resources.",
+        ],
+        image: {
+          src: wellness6,
+          full: true
+        }
+      },
+      {
+        title: "Detailed Content Post Page",
+        paragraphs: [
+          "The Detailed Post page of the Wellness Clinic website provides an in-depth exploration of individual blog topics, offering valuable insights and information for readers. At the top of the page, a prominent title and captivating header image set the tone for the content, drawing readers in.",
+
+"The body of the post features well-organized sections, making it easy to read and navigate. Each section contains clear headings, engaging visuals, and informative text that delves into the topic, providing expert tips and advice.",
+
+"At the end of the post, a comment section allows readers to share their thoughts and engage with the content, fostering a sense of community. Additionally, a suggested list of related articles encourages further exploration of relevant topics, enhancing the user experience and keeping readers engaged with the Wellness Clinic's offerings. This structured layout ensures that visitors find the information they need while feeling supported in their wellness journey.",
+        ],
+        image: {
+          src: wellness7,
+          full: true
         }
       },
     ]

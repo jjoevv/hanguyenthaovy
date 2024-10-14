@@ -57,7 +57,7 @@ const ProjectSection: React.FC = () => {
       <div className="container mx-auto flex flex-col md:flex-row">
         {/* Cột 1: Latest Projects */}
         <div className=" md:flex md:flex-col md:sticky md:top-0 md:h-screen md:items-center md:justify-center md:w-1/5">
-        <h2 className="text-2xl text-dark-green  md:text-gray-400 md:text-4xl lg:text-6xl lg:sticky lg:top-40 transform lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
+          <h2 className="text-2xl text-dark-green  md:text-gray-400 md:text-4xl lg:text-6xl lg:sticky lg:top-40 transform lg:rotate-90 md:rotate-90 whitespace-nowrap font-bold ">
             Latest Projects
           </h2>
         </div>
