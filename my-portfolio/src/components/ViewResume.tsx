@@ -1,7 +1,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import cv from '../assets/HaNguyenThaoVy.pdf'; // Import the PDF file
+import cv from '../assets/Ha Nguyen Thao Vy.pdf'; // Import the PDF file
 
 const ViewResumeButton = () => {
   return (

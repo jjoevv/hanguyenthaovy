@@ -50,6 +50,9 @@ import wellness7 from '../assets/imgs/wc7.png'
 import wellness8 from '../assets/imgs/wc8.png'
 import wellness9 from '../assets/imgs/wc9.png'
 
+import travel from '../assets/imgs/travel (1).png'
+
+
 export interface ContentSection {
   title: string;
   paragraphs: string[];
@@ -83,10 +86,12 @@ export interface ProjectDetail {
     scope: string;
     tools: string;
   },
+  list: boolean;
 }
 
 export const projectsData: ProjectDetail[] = [
   {
+    list: false,
     name: "Conference Searching Website",
     link: "conferensearching",
     introduction: 'The graduation project focuses on creating a comprehensive Conference Searching website.',
@@ -107,7 +112,7 @@ export const projectsData: ProjectDetail[] = [
       isProcess: true
     },
     overview: {
-      overview: "The project is a web design for a pet shop website that helps pet owners find, browse, and purchase products, register for services, and enroll in reputable training programs. The app also enables users to update health information for their pets, schedule vet appointments, and track health records remotely.",
+      overview: "Our conference searching website is a graduation project designed to help users discover and connect with global conferences across various fields. With advanced search filters, personalized alerts, and a user-friendly interface, it simplifies finding events that match your interests and schedule, supporting growth and collaboration.",
       role: 'UXUI Designer and Frontend Developer in a team of five',
       scope: 'The graduation project spans 6 months, for in-depth exploration, design, development, and testing.',
       tools: 'Figma, ReactJS, Bootstrap'
@@ -206,6 +211,7 @@ export const projectsData: ProjectDetail[] = [
     ]
   },
   {
+    list: false,
     name: "Pet Shop Web Design Project",
     link: "petshopweb",
     introduction: 'Petshop LoveLy Paws website design project course',
@@ -324,6 +330,7 @@ export const projectsData: ProjectDetail[] = [
     ]
   },
   {
+    list: false,
     name: "Pet Shop App",
     link: "petshopapp",
     image1: app_pet,
@@ -396,6 +403,7 @@ export const projectsData: ProjectDetail[] = [
     ]
   },
   {
+    list: false,
     name: "Wellness Clinic",
     link: "wellnessclinic",
     image1: wellness8,
@@ -499,6 +507,7 @@ export const projectsData: ProjectDetail[] = [
     ]
   },
   {
+    list: false,
     name: "Chat Interface",
     link: "chatapp",
     image1: chatapp1,
@@ -545,6 +554,90 @@ export const projectsData: ProjectDetail[] = [
         ],
         image: {
           src: chatapp5,
+          full: false
+        }
+      },
+      {
+        title: "Add friend feature",
+        paragraphs: [
+          " an icon is provided for quickly searching for friends and sending friend requests, streamlining the connection process."
+        ],
+        image: {
+          src: chatapp6,
+          full: false
+        }
+      },
+      {
+        title: "Group Chat",
+        paragraphs: [
+          "The group creation feature enables users to form chat groups for collective conversations. Users can name the group, add multiple friends from their contact list, and create a dedicated space for group discussions.",
+          "The interface provides options to manage group members, including the ability to remove participants or change group settings. Notifications for new messages within the group ensure that all members stay updated on ongoing conversations."
+        ],
+        image: {
+          src: chatapp7,
+          full: false
+        }
+      },
+      {
+        title: "Create Group Chat",
+        paragraphs: [
+          "A button allows users to easily initiate group chats.",
+        ],
+        image: {
+          src: chatapp8,
+          full: false
+        }
+      },
+    ]
+  },
+  {
+    list: true,
+    name: "Travel Booking App",
+    link: "travelbookingapp",
+    image1: travel,
+    image2: travel,
+    sketch: {
+      isSketch: false,
+      image: '',
+      content: []
+    },
+    process: {
+      content: [
+        "The project emphasizes management methods, resulting in a scaled-down software solution that is a single app featuring only basic functionalities.",
+        "In this project, we learned how to manage software development projects effectively using the Agile model. The process begins with an executive summary outlining goals and objectives. Research and analysis follow, identifying user needs and key features. A detailed project plan is developed, focusing on iterative development with clear milestones and deliverables.",
+
+        "We engage in sprint planning, where wireframing and prototyping help visualize the interface, followed by UX/UI design. As the person responsible for the user interface, I created a user-friendly and visually appealing design while actively participating in frontend development.",
+
+        "During each sprint, the interface and functionality are built incrementally. Testing and QA are integrated throughout the development process, ensuring smooth operation across devices. After collecting feedback from stakeholders, we refine the product before the release. Finally, post-launch monitoring tracks performance for continuous improvement."
+      ],
+      image: [chatapp2, chatapp3],
+      isProcess: true
+    },
+    introduction: 'Streamlining journeys with seamless and intuitive travel booking app designs',
+    overview: {
+      overview: "Streamlining journeys with seamless and intuitive travel booking app designs",
+      role: 'UX/UI Designer, Frontend Developer, Tester',
+      scope: '15 weeks course',
+      tools: 'Figma, ReactJS'
+    },
+    contentSections: [
+      {
+        title: "Main screen ",
+        paragraphs: [],
+        image: {
+          src: chatapp4,
+          full: false
+        }
+      },
+
+      {
+        title: "Travel Booking App",
+        paragraphs: [
+          "Explore the world effortlessly with an all-in-one travel app for stays, activities, and more.",
+          "Simplify your journey with smarter options and personalized experiences.",
+        ],
+        image: {
+          src: travel,
           full: false
         }
       },

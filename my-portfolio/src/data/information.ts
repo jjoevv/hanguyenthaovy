@@ -2,9 +2,7 @@ import mailIcon from '../assets/imgs/mail.png'
 import phoneIcon from '../assets/imgs/phone.png'
 import githubIcon from '../assets/imgs/github.png'
 import figmaIcon from '../assets/imgs/figma.png'
-import sketchIcon from '../assets/imgs/sketch.png'
 import illustratorIcon from '../assets/imgs/illustrator.png'
-import adobexdIcon from '../assets/imgs/adobexd.png'
 
 // information.ts
 export interface Information {
@@ -43,10 +41,10 @@ export const informationData: Information = {
   education: {
     school: "Ho Chi Minh City University of Science (HCMUS)",
     major: "Information Technology",
-    gpa: "7.0/10",
+    gpa: "3.0",
     courses: ["Web Development", "UX/UI Design", "Project Management"],
   },
-  tools: [figmaIcon, illustratorIcon, sketchIcon, adobexdIcon],
+  tools: [figmaIcon, illustratorIcon],
   softSkills: ["Communication","Teamwork","Problem-Solving", "Time Management"],
   skillSet: ["Front-end development", "UI/UX Design", "Graphic Design" ],
   icons: [

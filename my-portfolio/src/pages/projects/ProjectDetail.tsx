@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import BackToHomePageButton from '../../components/BackToHomePageButton';
 import backgroundImage from '../../assets/imgs/bg.png'
 import ScrollToTopButton from '../../components/ScrollToTopButton';
+import Detail from './Detail';
 
 const ProjectDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Get the project ID from the URL
@@ -19,7 +20,13 @@ const ProjectDetailPage: React.FC = () => {
 
 
   return (
-    <div className=" container mx-auto py-20 md:px-40 bg-slate-50"
+ <>
+ {
+  project.list ? 
+  <Detail/>
+  :
+  <>
+     <div className=" container mx-auto py-20 md:px-40 bg-slate-50"
       style={{
         backgroundAttachment: 'fixed', // Giữ hình nền cố định khi cuộn
         backgroundImage: `url(${backgroundImage})`, // Đặt hình nền
@@ -153,6 +160,9 @@ const ProjectDetailPage: React.FC = () => {
       <BackToHomePageButton />
       <ScrollToTopButton/>
     </div>
+  </>
+ }
+ </>
   );
 };
 
