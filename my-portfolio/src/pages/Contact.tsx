@@ -4,6 +4,7 @@ import { informationData } from '../data/information';
 import backgroundImage from '../assets/imgs/bg.png';
 import SuccessMessage from '../components/SuccessMessage';
 import ViewResumeButton from '../components/ViewResume';
+import GotoBehance from '../components/GotoBehance';
 
 const serviceId = import.meta.env.BASE_URL_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -99,6 +100,11 @@ const validateForm = (): boolean => {
         <p className="text-lg mt-8 text-black-700">
           <strong>Resume:</strong> 
           <ViewResumeButton/>
+          
+        </p>
+        <p className="text-lg mt-8 text-black-700">
+          <strong>Behance:</strong> 
+          <GotoBehance/>
         </p>
       </div>
 

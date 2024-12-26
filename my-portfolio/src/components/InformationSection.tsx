@@ -3,6 +3,7 @@ import { informationData } from '../data/information'; // Đường dẫn đến
 import ViewResumeButton from './ViewResume';
 import art from '../assets/imgs/me.png'
 import { Link } from 'react-router-dom';
+import GotoBehance from './GotoBehance';
 
 const InformationSection = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
@@ -116,7 +117,8 @@ const InformationSection = () => {
 
             <div className='mt-8 '>
               <h2 className="text-2xl font-semibold mb-4 italic text-start ">Resume</h2>
-              <div className='w-full flex justify-center items-center'><ViewResumeButton /></div>
+              <div className='w-full flex items-center'><ViewResumeButton /></div>
+              <div className='w-full flex items-center'><GotoBehance /></div>
             </div>
           </div>
         </div>
